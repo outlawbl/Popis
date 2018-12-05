@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue2"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
+    <EditText
+        android:id="@+id/eteSifraArtikla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:hint="Šifra artikla"
+        android:inputType="textPersonName"
+        android:backgroundTint="#fff"
+        android:textColorHint="#6f6f6f"
+        android:textColor="#fff"/>
+
+    <EditText
+        android:id="@+id/eteNazivArtikla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eteSifraArtikla"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Naziv"
+        android:inputType="textPersonName"
+        android:backgroundTint="#fff"
+        android:textColorHint="#6f6f6f"
+        android:textColor="#fff"/>
+
+    <EditText
+        android:id="@+id/eteLokacijaArtikla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/eteNazivArtikla"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Lokacija"
+        android:inputType="textPersonName"
+        android:backgroundTint="#fff"
+        android:textColorHint="#6f6f6f"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/btnSpasi"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btnPonisti"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="saveArtikal"
+        android:text="Snimi"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnPonisti"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="236dp"
+        android:background="@color/colorPrimary"
+        android:onClick="goToArtikliLista"
+        android:text="Poništi"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp"/>
+
+
+</RelativeLayout>
