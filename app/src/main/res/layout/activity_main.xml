@@ -93,11 +93,11 @@
                     android:orientation="vertical"                    >
 
                     <ImageButton
-                        android:onClick="goToArtikliAllList"
                         android:layout_width="80dp"
-                        android:layout_height="810dp"
-                        android:src="@drawable/popis"
-                        android:background="@null"/>
+                        android:layout_height="80dp"
+                        android:background="@null"
+                        android:onClick="goToArtikliAllList"
+                        android:src="@drawable/popis" />
 
                     <TextView
                         android:layout_width="wrap_content"
