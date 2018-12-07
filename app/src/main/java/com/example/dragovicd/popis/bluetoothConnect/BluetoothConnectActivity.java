@@ -112,7 +112,7 @@ BluetoothConnectActivity extends AppCompatActivity {
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        bateryStatus = (TextView) findViewById(R.id.bateryStatus);
+        //bateryStatus = (TextView) findViewById(R.id.bateryStatus);
 
 
 

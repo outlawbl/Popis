@@ -256,7 +256,7 @@ public class ArtikliActivity extends AppCompatActivity  {
     public void PrikaziFilter(ArtikliActivity v) {
         Button btn_zatvori;
         Button btn_filtriraj;
-        myDialog.setContentView(R.layout.filter_layout);
+        myDialog.setContentView(R.layout.artikal_popisi);
         btn_zatvori =(Button) myDialog.findViewById(R.id.btn_zatvori);
         btn_filtriraj = (Button) myDialog.findViewById(R.id.btn_filtriraj);
         //final String filter_text = ((EditText)().getText().toString();
