@@ -11,6 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical">
 
         <TextView
@@ -20,12 +22,12 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="Unesite željenu lokaciju"
+            android:text="Popis artikla"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textSize="19sp" />
 
         <EditText
-            android:id="@+id/filterText"
+            android:id="@+id/eteSifraArtikla"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -33,18 +35,23 @@
             android:text="" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/eteNazivArtikla"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:inputType="textPersonName" />
 
         <MultiAutoCompleteTextView
-            android:id="@+id/multiAutoCompleteTextView2"
+            android:id="@+id/eteKomentarArtikla"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="5dp"
             android:text="MultiAutoCompleteTextView" />
+
+        <Spinner
+            android:id="@+id/StanjeArtikla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,13 +60,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_filtriraj"
+                android:id="@+id/btn_popisi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/filterText"
+                android:layout_alignEnd="@+id/eteSifraArtikla"
                 android:layout_alignParentBottom="true"
                 android:background="@color/colorPrimary"
-                android:text="Filtriraj"
+                android:text="Popiši"
                 android:textColor="@android:color/background_light" />
 
             <Space
@@ -71,12 +78,13 @@
                 android:id="@+id/btn_zatvori"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/filterText"
-                android:layout_alignTop="@+id/btn_filtriraj"
+                android:layout_alignStart="@+id/eteSifraArtikla"
+                android:layout_alignTop="@+id/btn_popisi"
                 android:background="@color/colorPrimary"
                 android:text="Zatvori"
                 android:textColor="@android:color/background_light" />
         </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

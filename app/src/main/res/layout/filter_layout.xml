@@ -7,10 +7,10 @@
     android:background="@drawable/customborder">
 
     <Button
-        android:id="@+id/btn_filtriraj"
+        android:id="@+id/btn_popisi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/filterText"
+        android:layout_alignEnd="@+id/eteSifraArtikla"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="19dp"
         android:background="@color/colorPrimary"
@@ -21,14 +21,14 @@
         android:id="@+id/btn_zatvori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/filterText"
-        android:layout_alignTop="@+id/btn_filtriraj"
+        android:layout_alignStart="@+id/eteSifraArtikla"
+        android:layout_alignTop="@+id/btn_popisi"
         android:background="@color/colorPrimary"
         android:text="Zatvori"
         android:textColor="@android:color/background_light" />
 
     <EditText
-        android:id="@+id/filterText"
+        android:id="@+id/eteSifraArtikla"
         android:layout_width="195dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

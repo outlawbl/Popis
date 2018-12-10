@@ -245,7 +245,7 @@ public class ArtikliActivityBt extends AppCompatActivity  {
 
         btn_zatvori =(Button) myDialog.findViewById(R.id.btn_zatvori);
 
-        btn_filtriraj = (Button) myDialog.findViewById(R.id.btn_filtriraj);
+        btn_filtriraj = (Button) myDialog.findViewById(R.id.btn_popisi);
 
 
         //final String filter_text = ((EditText)().getText().toString();
@@ -276,7 +276,7 @@ public class ArtikliActivityBt extends AppCompatActivity  {
     }
 
     public void filtriraj(View view){
-        eteFlter = (EditText) myDialog.findViewById(R.id.filterText);
+        eteFlter = (EditText) myDialog.findViewById(R.id.eteSifraArtikla);
         filter_text = eteFlter.getText().toString();
         artikli =  readDatabaseAllArtikli();
         artikliResultsFilter.clear();

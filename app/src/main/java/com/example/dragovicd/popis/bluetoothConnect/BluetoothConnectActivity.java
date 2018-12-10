@@ -11,7 +11,6 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -386,7 +385,35 @@ BluetoothConnectActivity extends AppCompatActivity {
     }
 
     public void filtriraj(View view) {
-        eteFlter = (EditText) myDialog.findViewById(R.id.filterText);
+        eteFlter = (EditText) myDialog.findViewById(R.id.eteSifraArtikla);
+        filter_text = eteFlter.getText().toString();
+        osnovnaSredstva = readDatabaseAllArtikli();
+        osnovnoSredstvoResultsFilter.clear();
+
+
+        for (OsnovnoSredstvo item : osnovnaSredstva) {
+            //if(filter_text != null || filter_text !=""){
+            if (item.getLokacija().equals(filter_text)) {
+                osnovnoSredstvoResultsFilter.add(item);
+            }
+        }
+        if (osnovnoSredstvoResultsFilter.size() > 0) {
+            adapter = new ArtikliAdapter(BluetoothConnectActivity.this, R.layout.item_layout, osnovnoSredstvoResultsFilter, nextActivity);
+            listView.setAdapter(adapter);
+            filtered = 1;
+        } else {
+            adapter = new ArtikliAdapter(BluetoothConnectActivity.this, R.layout.item_layout, osnovnaSredstva, nextActivity);
+            listView.setAdapter(adapter);
+            filtered = 0;
+        }
+
+        myDialog.dismiss();
+
+    }
+
+
+    public void popisuj(View view) {
+        eteFlter = (EditText) myDialog.findViewById(R.id.eteSifraArtikla);
         filter_text = eteFlter.getText().toString();
         osnovnaSredstva = readDatabaseAllArtikli();
         osnovnoSredstvoResultsFilter.clear();
@@ -542,7 +569,7 @@ BluetoothConnectActivity extends AppCompatActivity {
 
         btn_zatvori =(Button) myDialog.findViewById(R.id.btn_zatvori);
 
-        btn_filtriraj = (Button) myDialog.findViewById(R.id.btn_filtriraj);
+        btn_filtriraj = (Button) myDialog.findViewById(R.id.btn_popisi);
 
 
         //final String filter_text = ((EditText)().getText().toString();
